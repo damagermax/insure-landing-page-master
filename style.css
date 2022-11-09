@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+:root {
+  --Dark-Violet: hsl(256, 26%, 20%);
+  --Grayish-Blue: hsl(216, 30%, 68%);
+  --Very-Dark-Violet: hsl(270, 9%, 17%);
+  --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  max-width: 1440px;
+  font-family: "Karla", sans-serif;
+}
+
+nav {
+  position: relative;
+  max-width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.--container {
+  padding-inline: 10%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--Dark-Grayish-Violet);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cta {
+  padding: 0.5rem 1.5rem;
+  border: var(--Dark-Violet) 1.5px solid;
+  color: var(--Dark-Violet);
+  display: inline-block;
+  transition: background-color 0.5s, color 200ms;
+}
+nav .cta:hover {
+  background-color: var(--Very-Dark-Violet);
+  color: var(--Very-Light-Gray);
+}
+/* * hero ================================ */
+.hero {
+  display: grid;
+  background-color: var(--Dark-Violet);
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: fit-content;
+  color: var(--Very-Light-Gray);
+  position: relative;
+  height: 35rem;
+  padding-block: 5rem;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: right, left;
+  background-position-y: 0, 25rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("images/bg-pattern-intro-right-desktop.svg"),
+    url("images/bg-pattern-intro-left-desktop.svg");
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  max-width: 14ch;
+  line-height: 1;
+  font-family: "DM Serif Display", serif;
+}
+.hero h1::before {
+  content: "";
+  max-width: 25%;
+  border: var(--Very-Light-Gray) 0.7px solid;
+  display: block;
+  margin-bottom: 4rem;
+}
+.hero p {
+  margin-block: 1rem;
+}
+
+.hero .cta {
+  color: var(--Very-Light-Gray);
+  border-color: var(--Very-Light-Gray);
+  margin-top: 1rem;
+  transition: background-color 0.5s, color 200ms;
+}
+.hero .cta:hover {
+  background-color: var(--Very-Light-Gray);
+  color: var(--Dark-Violet);
+  cursor: pointer;
+}
+.hero .right {
+  position: relative;
+}
+.hero img {
+  width: 100%;
+  display: inherit;
+  object-fit: contain;
+}
+
+#openBtn,
+#closeBtn {
+  display: none;
+}
+
+/* * different ================================ */
+.different {
+  margin-top: 20rem;
+  margin-bottom: 10rem;
+}
+
+.different h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.different h2::before {
+  max-width: 10%;
+  content: "";
+  border: var(--Dark-Violet) 0.7px solid;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.different h3 {
+  font-family: "DM Serif Display", serif;
+  margin-block: 1rem;
+}
+
+.different p {
+  font-size: 0.8rem;
+  color: var(--Dark-Grayish-Violet);
+}
+
+.different_items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+
+/* * findOut ================================ */
+.findOut {
+  max-width: 100%;
+  margin-inline: 10%;
+  color: var(--Very-Light-Gray);
+  display: flex;
+  align-items: center;
+  background-color: var(--Dark-Violet);
+  justify-content: space-between;
+  padding: 5rem;
+  background-image: url("images/bg-pattern-how-we-work-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  margin-bottom: 8rem;
+}
+.findOut p {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.8rem;
+  max-width: 18ch;
+}
+.findOut .cta {
+  border-color: var(--Very-Light-Gray);
+  color: var(--Very-Light-Gray);
+  transition: background-color 0.5s, color 200ms;
+}
+
+.findOut .cta:hover {
+  background-color: var(--Very-Light-Gray);
+  color: var(--Dark-Violet);
+  cursor: pointer;
+}
+
+/* * footer ================================ */
+footer {
+  background-image: url("/images/bg-pattern-footer-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 30%;
+  background-color: var(--Very-Light-Gray);
+  padding-block: 3rem;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+footer .links_container {
+  border-top: var(--Dark-Grayish-Violet) 1px solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+footer .links p {
+  margin-block: 1.5rem;
+  color: var(--Dark-Grayish-Violet);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+footer .links a {
+  color: var(--Dark-Violet);
+  display: inline-block;
+  padding-block: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1160px) {
+  html {
+    font-size: 13px;
+  }
+  .hero {
+    height: 33rem;
+  }
+}
+
+/* ? tablet =========================== */
+@media (max-width: 850px) {
+  /* ! nav bar start ==================== */
+
+  #openBtn {
+    display: block;
+  }
+
+  .navbar a {
+    display: none;
+    font-size: 1.5rem;
+    transition: display 300ms ease-in;
+    color: var(--Very-Light-Gray);
+    border-color: var(--Very-Light-Gray);
+    width: 100%;
+  }
+
+  .navbar li {
+    width: 100%;
+    text-align: center;
+    padding: 0 10%;
+  }
+  .navbar {
+    z-index: 9;
+    background-color: var(--Very-Dark-Violet);
+    position: absolute;
+    gap: 3rem;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    top: 8vh;
+    height: 0vh;
+
+    transition: 0.5s;
+  }
+
+  .navbar.active {
+    height: 100vh;
+  }
+
+  .navbar li:nth-child(1) {
+    margin-top: 3rem;
+  }
+
+  .navbar.active a {
+    display: block;
+    padding: 1rem;
+  }
+
+  /* ! nav bar end   ==================== */
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 0;
+  }
+
+  .hero::after {
+    background-image: none;
+  }
+
+  .hero .left {
+    padding-inline: 10%;
+    order: 1;
+    padding-block: 5rem;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("images/bg-pattern-intro-right-mobile.svg");
+  }
+
+  .hero p {
+    margin-top: 2rem;
+  }
+
+  .hero .right img {
+    width: 100%;
+    display: inherit;
+    order: -1;
+  }
+
+  .different {
+    margin-top: 4rem;
+  }
+  .different_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .findOut {
+    text-align: center;
+    background-image: url("images/bg-pattern-how-we-work-mobile.svg");
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .findOut p {
+    line-height: 1.1;
+  }
+
+  footer .links_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .top .icons img {
+    width: 20px;
+    margin-left: 1rem;
+  }
+}
+
+/* ? mobile/ ================================= */
+@media (max-width: 380px) {
+  .hero .left {
+    text-align: center;
+  }
+  .hero h1::before {
+    content: "";
+    display: none;
+    margin-bottom: 0px;
+  }
+
+  .different h2::before {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+  .different h2 {
+    text-align: center;
+  }
+
+  .different_items {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  footer .top {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  footer .links_container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
